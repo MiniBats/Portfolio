@@ -1,0 +1,185 @@
+body{
+  background-color:#121212 ;
+  color: #E0E0E0;
+}
+
+.papier button{
+  background-color: #BB86FC;
+  cursor: pointer;
+  border: none;
+  width: 8rem;
+  height: 3.5rem;
+}
+
+button:hover{
+  filter: brightness(60%);
+  
+}
+
+#cv{
+  margin-left: 6rem; 
+  transform: translate(2rem, -6rem);
+}
+
+#motivation{
+  margin-left: 0.5rem; 
+  transform: translate(2rem, -6rem);
+}
+
+#logo{
+  width: 10rem;
+  height: 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* espace entre le nom et la navbar */
+  align-items: center;
+  padding: 1rem;
+}
+
+/* le '.' permet de rentrer dans une class et le '#' permet de rentrer dans une id */
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.navbar a:hover {
+  color: #BB86FC;
+}
+
+ol{
+  padding-bottom: 2.5rem;
+}
+
+.home{
+  margin-left: 6rem;
+  margin-top: 4rem;
+}
+
+#moi{
+  margin-left: 3rem;
+}
+
+#etude{
+  margin-left: 6rem;
+}
+
+a{
+  color: #E0E0E0;
+  text-decoration: none;
+}
+
+#photo{
+  transform: translate(50rem, -5rem);
+}
+
+.games li{
+  list-style-type: disc;
+  color: #BB86FC;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+.games a:hover{
+  font-size: 1rem;
+  font-weight: bold; /* bold fait en sorte que le texte devienne en gras */
+}
+
+p{
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+.box button{
+  background-color: #BB86FC;
+  cursor: pointer;
+  border: none;
+  width: 12rem;
+  height: 5.5rem;
+  box-shadow: 0 10px 20px rgba(124, 9, 105, 1);
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+#project{
+  max-width: 45rem;
+  display: flex;  
+  gap: 2rem;   
+  justify-content: center; /* Optionnel: centre les cartes */
+  transform: translate(40rem, -12rem);
+}
+
+.card{
+    display: flex;
+    height: 15rem;
+    width: 10rem;
+    border: 1px solid;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(124, 9, 105, 1); /*Effet d'ombre autour de la carte*/
+}
+
+.card-inner{
+  height: 100%;
+  width: 100%;
+  position: relative; /* Ancre la position*/
+  transition: transform 800.6ms; /* temps de la transition qui sera effectuer lorsque le souris survollera le boutton ( hover )*/
+  transform-style: preserve-3d; /* Garde le visuel 3D. Quand on fait la transition -> comprends le faite qu on retourne la carte donc il doit afficher l'autre face*/
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute; /* Ici absolute > relative car on ne veut pas que le dos de la carte apparaisse a un autre endroit*/  
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-items: center;
+    backface-visibility: hidden; /* Cache le coté qu on vient de tourner avec la transition */
+    border-radius: 0.5rem;
+}
+
+.card-front{
+    background-color: #BB86FC;
+    color: black;
+    border: 1px solid #2c2c2c;
+}
+
+.card-back{
+    background-color: #BB86FC;
+    color: white;
+    transform: rotateY(180deg);
+    padding-left: 8px;
+    text-align: center;
+}
+
+#manette{
+  height: 160px;
+  width: 160px;
+  margin: auto;
+}
+
+#casquette{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
