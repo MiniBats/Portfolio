@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e3f 0%, #2d2d50 50%, #1a1a35 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #a5b4fc;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #4c5c9c;
+}
+
+#home_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #4c5c9c;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#home_btn:hover {
+  background-color: #6b7bc9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 123, 201, 0.4);
+}
+
+#title_text h1 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: #a5b4fc;
+}
+
+.sitemap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.sitemap nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: linear-gradient(135deg, rgba(40, 40, 70, 0.5) 0%, rgba(50, 50, 85, 0.4) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(107, 123, 201, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  min-width: 300px;
+}
+
+.sitemap nav a {
+  color: #e0e7ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(76, 92, 156, 0.3) 0%, rgba(50, 50, 80, 0.3) 100%);
+  border: 1px solid rgba(76, 92, 156, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+.sitemap nav a:hover {
+  background: linear-gradient(135deg, rgba(76, 92, 156, 0.5) 0%, rgba(50, 50, 80, 0.5) 100%);
+  border-color: rgba(107, 123, 201, 0.6);
+  color: #a5b4fc;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(107, 123, 201, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  #title {
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .sitemap nav ul {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #home_btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .sitemap nav a {
+    font-size: 1rem;
+  }
+}
