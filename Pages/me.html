@@ -38,7 +38,11 @@
     <div class="about">
       <div class="temp" id="propos">
         <p class="card_title">À propos</p>
-        <p>J'ai pour projet de devenir développeur de jeu vidéo, mais je n'exclus pas les autres types de dev. C'est pour ça que je suis dans un BTS SIO qui me permet d'obtenir pleins de connaissances dans divers sujets qui me seront utiles tout le long de ma carrière.</p>
+        <p>
+          🎮 Étudiant en BTS SIO, je me forme au développement informatique avec pour objectif principal de devenir développeur de jeux vidéo.<br><br>
+          💻 Curieux et motivé, j’aime comprendre comment fonctionnent les applications et les jeux, de la logique interne aux mécaniques de gameplay.<br><br>
+          🚀 Ce parcours me permet d’acquérir des bases solides dans différents domaines du développement, tout en construisant progressivement mon projet professionnel.
+        </p>
       </div>
 
       <div class="temp" id="parcours">
@@ -75,6 +79,41 @@
           <li> Mail : ethanurdanabia@hotmail.com</li>
           <li> TEL : +33 07 82 74 92 55</li>
         </ul>
+
+        <form action="https://formsubmit.co/ethanurdanabia@hotmail.com" method="POST" class="contact-form" data-aos="fade-left" id="contactForm">
+
+          <!-- Champs cachés FormSubmit -->
+          <input type="hidden" name="_subject" value="Nouveau contact depuis le Portfolio !">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://minibats.github.io/"> <!-- Redirection vers page locale -->
+
+          <!-- Nom -->
+          <div>
+            <label for="nom" class="sr-only">Votre Nom (*)</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre Nom" required autocomplete="name" aria-label="Votre Nom">
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="sr-only">Votre Email (*)</label>
+            <input type="email" id="email" name="email" placeholder="Votre Email" required autocomplete="email" aria-label="Votre Email">
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="sr-only">Votre Message (*)</label>
+            <textarea id="message" name="message" placeholder="Votre Message" rows="5" required aria-label="Votre Message"></textarea>
+          </div>
+
+          <!-- Bouton -->
+          <button type="submit" class="btn-primary">Envoyer</button>
+
+          <!-- Message de confirmation (sera affiché après submit si tu restes sur la même page) -->
+          <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+            Merci ! Votre message a été envoyé.
+          </p>
+        </form>
       </div>
     </div>
   </main>
@@ -82,6 +121,18 @@
     <footer>
 
     </footer>
+
+    <script>
+      // Afficher le message de confirmation si le formulaire est soumis
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
+
+      form.addEventListener('submit', (e) => {
+        // Optionnel: empêcher le refresh pour tester
+        // e.preventDefault();
+        successMessage.style.display = 'block';
+      });
+    </script>
 
   </body>
 
